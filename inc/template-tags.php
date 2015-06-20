@@ -86,7 +86,7 @@ function wrong_posted_on() {
 
 }
 endif;
-
+add_filter('widget_text', 'do_shortcode');
 if ( ! function_exists( 'wrong_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
