@@ -46,6 +46,7 @@ function wrong_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'wrong' ),
+		'footer' => 'Footer Menu',
 	) );
 
 	/*
@@ -103,6 +104,8 @@ add_action( 'widgets_init', 'wrong_widgets_init' );
  */
 function wrong_scripts() {
 	wp_enqueue_style( 'wrong-style', get_stylesheet_uri() );
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bxslider', get_template_directory_uri() . '/js/bxslider.js' );
 	wp_enqueue_script( 'wrong-navigation', get_template_directory_uri() . '/js/navigation.js', '', null, true );

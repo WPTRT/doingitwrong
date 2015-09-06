@@ -18,7 +18,14 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wrong' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>/" role="search">
+						<label>
+							<span class='screen-reader-text'><?php _e( 'Search', 'wrong'); ?></span>
+							<input type="search" name="s" />
+						</label> 
+						<input type="submit" name="submit" value="<?php _e( 'Search', 'wrong' ); ?>" class="search-submit" />
+					</form>
+
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 

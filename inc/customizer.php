@@ -25,6 +25,47 @@ function wrong_customize_register( $wp_customize ) {
         'section' => 'nav',
         'settings' => 'max_width'
         ) );
+
+
+   $wp_customize->add_section('testimonial',      array(
+            'title' => __( 'Testimonial', 'wrong' ),
+            'priority' => 100
+        )
+    );
+	
+	$wp_customize->add_setting( 'testimonial_title', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_title',		array(
+			'type' => 'text',
+			'label' =>  __( 'Testimonial Title', 'wrong' ),
+			'section' => 'testimonial',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_name', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_name',		array(
+			'type' => 'text',
+			'label' =>  __( 'Customer name', 'wrong' ),
+			'section' => 'testimonial',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_text', array(
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control('testimonial_text',		array(
+			'type' => 'textarea',
+			'label' =>  __( 'Testimonial', 'wrong' ),
+			'section' => 'testimonial',
+		)
+	);
+
 }
 add_action( 'customize_register', 'wrong_customize_register' );
 

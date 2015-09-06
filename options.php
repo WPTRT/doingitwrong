@@ -65,6 +65,8 @@ foreach( $options['social'] as $profile => $url){
 		</section>
 	<?php submit_button(); ?>
 	</form>
+	<br><br>
+	Please visit our <a href="#">facebook page</a> or <a href="#">tweet us.</a>
 	</div>
 <?php
 }
