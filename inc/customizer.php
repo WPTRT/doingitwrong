@@ -65,10 +65,23 @@ function wrong_customize_register( $wp_customize ) {
 			'section' => 'testimonial',
 		)
 	);
+	
+	$wp_customize->add_setting( 'footer_setting', array(
+		'sanitize_callback' => 'mytheme_sanitation',
+		'default' => 'Add some additional text here...'
+	) );
+	$wp_customize->add_control( 'footer_credit', array(
+		'label' => 'Footer extra info',
+		'section' => 'title_tagline',
+		'settings' => 'footer_setting'
+	) );
 
 }
 add_action( 'customize_register', 'wrong_customize_register' );
 
+function mytheme_sanitation( $value ){
+	return $value;
+}
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */

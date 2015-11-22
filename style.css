@@ -8,7 +8,7 @@ Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: doingitwrong
-Tags: custom-header, theme-options
+Tags: custom-header, theme-options, translation-ready, accessibility-ready, blue, post-formats, custom-menu
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -20,6 +20,8 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
+
+.screen-reader-text {}
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:

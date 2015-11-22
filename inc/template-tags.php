@@ -153,6 +153,20 @@ function wrong_categorized_blog() {
 	}
 }
 
+function my_theme_comments(){
+	$id = get_the_ID();
+	$avatar = get_avatar();
+	$coms = wp_list_comments( array( 'echo' => false ) );
+	$comments = get_comments( array( 'post_id' => $id ) );
+	
+	$walker = new Walker_Comment;
+	
+	$output = $walker->paged_walk( $comments, -1, '', '' );
+	$in_comment_loop = false;
+	
+	echo $output;
+}
+
 /**
  * Flush out the transients used in wrong_categorized_blog.
  */

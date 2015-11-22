@@ -1,6 +1,10 @@
 <?php
 /**
  * Front page template for theme
+ * 
+ * All themes have to follow core's template hierarchy:
+ * See: https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * 
  */
 get_header();
 

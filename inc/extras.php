@@ -93,7 +93,7 @@ add_action( 'wp', 'wrong_setup_author' );
 global $wp_embed;
 add_filter( 'the_excerpt', array( $wp_embed, 'autoembed' ), 9 );
 
-function add_link_pages( $content ){
+function add_linkpages_content( $content ){
 	$pages = wp_link_pages( 
 		array( 
 			'before' => '<div>' . __( 'Page: ', 'wrong' ),
@@ -105,7 +105,7 @@ function add_link_pages( $content ){
 	}
 	return $content . $pages;
 }
-add_filter( 'the_content', 'add_link_pages' );
+add_filter( 'the_content', 'add_linkpages_content' );
 
 add_filter( 'the_password_form', 'my_password_form' );
 function my_password_form(){
@@ -192,6 +192,12 @@ class x_archives extends WP_Widget
         
 }
 
+add_action( 'theme_footer_section', 'my_theme_extra_footer' );
+function my_theme_extra_footer(){
+	echo get_theme_mod( 'footer_setting', 'Add additional information here' );
+}
 
 remove_action( 'wp_head', 'feed_links_extra', 3); 
-remove_action( 'wp_head', 'feed_links', 2); 
+remove_action( 'wp_head', 'feed_links', 2);
+update_option('thumbnail_size_w', 460 );
+update_option('thumbnail_size_h', 460 );
