@@ -9,7 +9,7 @@
 ?>
 
 	</div><!-- #content -->
-
+<?php do_action( 'after_content' ); ?>
 
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

@@ -55,5 +55,5 @@
 		    
 		</div>
 	</header><!-- #masthead -->
-
+<?php do_action( 'my_theme_before_content_wrapper' ); ?>
 	<div id="content" class="site-content">
