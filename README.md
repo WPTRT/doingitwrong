@@ -24,7 +24,7 @@ While themes are not required to document every aspect of the theme it does need
 The `Text Domain` for all translation functions must be the same as the theme name. Constants and variables are not to be used.
 
 #### Licensing
-The theme needs to be GPL compatible. This does include bundled resources like images and included third-party scripts and files.
+The theme needs to be GPL compatible. This does include bundled resources like images and included third-party scripts and files. There is a [list of compatible licenses](http://www.gnu.org/licenses/license-list.en.html#GPLCompatibleLicenses) available.
 
 #### Naming
 Avoid using `theme` and reserved names like `twenty*`
