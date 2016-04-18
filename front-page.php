@@ -8,11 +8,10 @@
  */
 get_header();
 
-if ( get_option( 'show_on_front' ) == 'posts' ){
-	load_template( get_home_template() );
-} else {
 	get_template_part( 'slider' );
-	get_template_part( 'content', 'page' );
-}
+	get_template_part( 'section', 'hero' );
+	get_template_part( 'section', 'testimonials' );
+	wp_reset_query();
+	get_template_part( 'index', 'home' );
 
 get_footer();

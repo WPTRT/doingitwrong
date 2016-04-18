@@ -26,43 +26,105 @@ function wrong_customize_register( $wp_customize ) {
         'settings' => 'max_width'
         ) );
 
-
-   $wp_customize->add_section('testimonial',      array(
+	# Testimonials section
+   $wp_customize->add_section('testimonials',      array(
             'title' => __( 'Testimonial', 'wrong' ),
             'priority' => 100
         )
     );
 	
-	$wp_customize->add_setting( 'testimonial_title', array(
+	$wp_customize->add_setting( 'testimonial_image_1', array(
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
-	$wp_customize->add_control('testimonial_title',		array(
+	$wp_customize->add_control('testimonial_image_1',		array(
 			'type' => 'text',
-			'label' =>  __( 'Testimonial Title', 'wrong' ),
-			'section' => 'testimonial',
+			'label' =>  __( ' First Testimonial Image', 'wrong' ),
+			'section' => 'testimonials',
 		)
 	);
 
-	$wp_customize->add_setting( 'testimonial_name', array(
+	$wp_customize->add_setting( 'testimonial_name_1', array(
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
-	$wp_customize->add_control('testimonial_name',		array(
+	$wp_customize->add_control('testimonial_name_1',		array(
 			'type' => 'text',
 			'label' =>  __( 'Customer name', 'wrong' ),
-			'section' => 'testimonial',
+			'section' => 'testimonials',
 		)
 	);
 
-	$wp_customize->add_setting( 'testimonial_text', array(
+	$wp_customize->add_setting( 'testimonial_text_1', array(
 		'sanitize_callback' => 'esc_url_raw',
 	) );
 
-	$wp_customize->add_control('testimonial_text',		array(
+	$wp_customize->add_control('testimonial_text_1',		array(
 			'type' => 'textarea',
 			'label' =>  __( 'Testimonial', 'wrong' ),
-			'section' => 'testimonial',
+			'section' => 'testimonials',
+		)
+	);	$wp_customize->add_setting( 'testimonial_image_2', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_image_2',		array(
+			'type' => 'text',
+			'label' =>  __( 'Second Testimonial Image', 'wrong' ),
+			'section' => 'testimonials',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_name_2', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_name_2',		array(
+			'type' => 'text',
+			'label' =>  __( 'Customer name', 'wrong' ),
+			'section' => 'testimonials',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_text_2', array(
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control('testimonial_text_2',		array(
+			'type' => 'textarea',
+			'label' =>  __( 'Testimonial', 'wrong' ),
+			'section' => 'testimonials',
+		)
+	);	$wp_customize->add_setting( 'testimonial_image_3', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_image_3',		array(
+			'type' => 'text',
+			'label' =>  __( 'Third Testimonial Image', 'wrong' ),
+			'section' => 'testimonials',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_name_3', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control('testimonial_name_3',		array(
+			'type' => 'text',
+			'label' =>  __( 'Customer name', 'wrong' ),
+			'section' => 'testimonials',
+		)
+	);
+
+	$wp_customize->add_setting( 'testimonial_text_3', array(
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control('testimonial_text_3',		array(
+			'type' => 'textarea',
+			'label' =>  __( 'Testimonial', 'wrong' ),
+			'section' => 'testimonials',
 		)
 	);
 	

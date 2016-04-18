@@ -12,20 +12,17 @@ if ( ! function_exists( 'wrong_paging_nav' ) ) :
  * Display navigation to next/previous set of posts when applicable.
  */
 function wrong_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
+	global $wp_query;
+
+	echo "<div class='nav-links'>";
+
+	previous_posts_link();
+
+	for( $i = 1; $i <= $wp_query->max_num_pages; $i++ ) {
+		echo '<span class="page-numbers"><a href="' . get_pagenum_link( $i ) . '">' . $i . '</a></span>';
 	}
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'wrong' ); ?></h1>
-		<div class="nav-links">
 
-			<?php echo paginate_links(); ?>
-
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
+	next_posts_link();
 }
 endif;
 
