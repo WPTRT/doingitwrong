@@ -88,8 +88,17 @@ function supported_post_formats(){
  */
 function wrong_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'wrong' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Sitewide', 'wrong' ),
+		'id'            => 'sitewide',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Single', 'wrong' ),
+		'id'            => 'single-sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

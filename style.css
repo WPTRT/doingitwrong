@@ -58,7 +58,6 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
-/*	font-size: 100%;*/
 	font-style: inherit;
 	font-weight: inherit;
 	margin: 0;
@@ -84,6 +83,7 @@ html {
 
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+	word-wrap: break-word;
 }
 
 article,
@@ -662,6 +662,13 @@ article {
 	text-shadow: .3rem .2rem #fff
 }
 
+.content-area {
+	padding: 3em 0;
+}
+
+.site-main {
+	padding-bottom: 3em;
+}
 
 /*--------------------------------------------------------------
 10.1 Posts and pages
@@ -839,4 +846,11 @@ object {
 	display: block;
 }
 
-.social{margin:12px;}
+.social-area {
+	min-width: 100%;
+}
+.social-area .social-link {
+	display: inline-block;
+	list-style: none;
+	padding: .5em;
+}

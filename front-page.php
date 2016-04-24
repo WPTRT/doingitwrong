@@ -9,7 +9,6 @@
 get_header();
 
 	get_template_part( 'slider' );
-	get_template_part( 'section', 'hero' );
 	get_template_part( 'section', 'testimonials' );
 	wp_reset_query();
 	get_template_part( 'index', 'home' );

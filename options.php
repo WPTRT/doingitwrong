@@ -14,7 +14,24 @@ function settings_init(){
 			'blogger' => '#',
 			'youtube' => '#',
 			'pinterest' => '#',
-			'gplus' => '#'
+			'google' => '#',
+			'amazon' => '#',
+			'bitbucket' => '#',
+			'codepen' => '#',
+			'drupal' => '#',
+			'instagram' => '#',
+			'foursquare' => '#',
+			'delicious' => '#',
+			'linkedin' => '#',
+			'snapchat' => '#',
+			'steam' => '#',
+			'vimeo' => '#',
+			'wordpress' => '#',
+			'tumblr' => '#',
+			'yelp' => '#',
+			'reddit' => '#',
+			'lastfm' => '#',
+			'flickr' => '#',
 			)
 		);
 	

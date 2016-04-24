@@ -24,6 +24,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
+
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wrong' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -31,11 +32,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php echo $sitename; ?></h2>
 		</div>
-	<?php if ( get_header_image() ): ?>
-	<div class="header-image">
-		<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo get_bloginfo( 'title', 'display' ); ?>" />
-	</div>
-	<?php endif; ?>
+	<?php get_template_part( 'section', 'hero' ); ?>
 
 		<?php if( has_nav_menu( 'primary' ) ): ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -44,13 +41,15 @@
 		</nav><!-- #site-navigation -->
 		<?php endif; ?>
 		
-		<div class="social">
+		<div class="social-area">
 		    <?php $options = get_option( 'default_options' );
+			echo '<ul class="social-links">';
             foreach( $options['social'] as $profile => $link ){
-                echo '<span class="social">';
+                echo '<li class="social-link">';
                 echo '<a href="' . $link . '">' . $profile . '</a>';
-                echo '</span>';
+                echo '</li>';
             }
+			echo '</ul>';
             ?>
 		    
 		</div>

@@ -5,7 +5,7 @@
 	
 	.testimonial.one-third {
 		float: left;
-		width: 30%;
+		width: 33%;
 		padding-right: 3%;
 	}
 	.testimonials:before,
@@ -24,17 +24,17 @@
 
 # create some default just in case they don't have any
 $default = array(
-	'Robin' => array(
-		'photo' => 'billy.jpg',
+	'Marshall' => array(
+		'photo' => 'person-1.jpg',
 		'content' => 'The best I can give you is a fake smile and dead eyes!'
 	),
-	'Marshall' => array(
-		'photo' => 'billy.jpg',
+	'Robin' => array(
+		'photo' => 'person-2.jpg',
 		'content' => 'I wound up shame-eating the whole pizza. I woke up all greasy and sweaty. My sheets looked like what they wrap Deli sandwiches in!'
 	),
 	'Ted' => array(
-		'photo' => 'billy.jpg',
-		'content' => 'Because sometimes even if you know how something’s gonna end that doesn’t mean you can’t enjoy the ride.!'
+		'photo' => 'person-3.jpg',
+		'content' => 'Because sometimes even if you know how something\'s gonna end that doesn\'t mean you can\'t enjoy the ride.!'
 	),
 	
 );
@@ -70,7 +70,7 @@ $testimonials = array(
 
 foreach ( $testimonials as $key => $testimonial ) {
 	echo '<div class="testimonial one-third">';
-	echo '<h3 class="person">' . $testmonial[0] . '</h3>';
+	echo '<h2 class="person">' . $testmonial[0] . '</h2>';
 	echo '<img src="' . $testimonial[1] . '"/>';
 	echo '<div class="testimonial-content">';
 	echo wpautop( $testimonial[2] );
@@ -81,9 +81,9 @@ foreach ( $testimonials as $key => $testimonial ) {
 else: # we don't have any testimonials
 	foreach( $default as $person => $words ){
 		echo '<div class="testimonial one-third">';
-		echo '<h3 class="person">' . $person . '</h3>';
+		echo '<h2 class="person">' . $person . '</h2>';
 		echo '<div class="testimonial-content">';
-		echo '<img src="' . get_template_directory_uri() . '/images/' . $words[ 'photo' ] . '"/>';
+		echo '<img src="' . get_template_directory_uri() . '/img/' . $words[ 'photo' ] . '"/>';
 		echo wpautop( $words[ 'content' ] );
 		echo '</div>';
 		echo '</div>';
