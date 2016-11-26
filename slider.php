@@ -1,7 +1,7 @@
 <style>
 	.bx-wrapper{
 		padding: 60px 0;
-	}	
+	}
 	.bxslider .slide {
 		width: 80%;
 	}
@@ -33,8 +33,8 @@ if ( !empty( $featured ) ):
 		echo 'listing';
 		setup_postdata( $feature );
 		$link = esc_url( get_permalink( $feature->ID ) );
-		$cont = sprintf( '<span class="featured-link"><a href="%s">' . __( 'Read: ', 'wrong' ) . $feature->post_title . '</a></span>', $link );
-		$postinfo = sprintf( '<h3 class="featured-post">%s</h3><div class="featured-content"><p>%s</p></div>%s', $feature->post_title, get_the_excerpt(), $cont );
+		$cont = '<span class="featured-link"><a href="' . $link . '">Read: ' . $feature->post_title . '</a></span>';
+		$postinfo = '<h3 class="featured-post">' . $featured->post_title . '</h3><div class="featured-content"><p>' . get_the_excerpt() . '</p></div>' . $cont ;
 		printf( '<li><div class="slide">%s</div></li>\n', $postinfo );
 	}
 

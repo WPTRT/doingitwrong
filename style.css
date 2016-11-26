@@ -2,13 +2,13 @@
 Theme Name: doingitwrong
 Theme URI: http://bit.ly/IqT6zt
 Author: http://bringvictory.com/
-Author URI: 
+Author URI:
 Description: A simple theme that features your sticky posts on a front-page slider.
 Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: doingitwrong
-Tags: custom-header, theme-options, translation-ready, accessibility-ready, blue, post-formats, custom-menu
+Tags: custom-header, theme-options, translation-ready, accessibility-ready, blue, post-formats, custom-menu, blog, news, portfolio, education, custom-menu, custom-background, custom-logo
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -634,6 +634,16 @@ a:active {
 	padding: 0 5rem;
 	margin: 0 auto;
 	box-shadow: 0 1rem 1rem .5rem #ddd;
+}
+
+.site .section span {
+	display: block;
+	width: 100%;
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 6em 0;
+	font-size: 2em;
+	color: #fff;
 }
 
 article {
