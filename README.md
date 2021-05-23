@@ -1,3 +1,6 @@
+# This theme is not maintained
+
+
 doing_it_wrong theme
 ============
 
